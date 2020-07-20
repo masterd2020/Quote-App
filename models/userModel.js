@@ -20,7 +20,10 @@ const userSchema = mongoose.Schema({
         required: [true, 'please provide your nickname'],
         unique: true
     },
-    photo: String,
+    photo: {
+      type: String,
+      default: 'default.jpg'
+    },
     role: {
       type: String,
       default: 'user'

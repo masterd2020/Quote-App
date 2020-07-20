@@ -8,7 +8,7 @@ block content
         .box__quote
           textarea.quote__content= quote.quote
           .box__quote--footer
-            img.box__quote--image(src=`/img/users/${user.photo}`)
+            img.box__quote--image(src=`/img/users/${user.photo}` alt=`${user.nickname}`)
             span= user.nickname
             #btn__edit.btn__update(data-id=`${quote.id}`) Update
             #btn__del.btn__delete(data-id=`${quote.id}`) Delete

@@ -5,8 +5,8 @@
   if user
     button.nav__logout.act Logout
     a.nav__user--image(href='/dashboard')
-      img.nav__image(src=`/img/users/${user.photo}`)
-      p.span__fix= user.name.split(' ')[0]
+      img.nav__image(src=`/img/users/${user.photo}` alt=`${user.nickname}`)
+      p.span__fix= user.name.split(' ')[1]
   else  
     a.nav__login(href='/login') Login
     a.nav__signup(href='/signup') Signup

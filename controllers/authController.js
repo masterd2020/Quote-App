@@ -65,6 +65,8 @@ exports.signup = asyncError(async (req, res, next) => {
   
   if(req.file) {
     req.body.photo = req.file.filename;
+  } else {
+    req.body.photo = 'default.jpg'
   }
     const user = await User.create(req.body);
     

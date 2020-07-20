@@ -28,7 +28,7 @@ block content
               if(newDate[2] === date[2])
                 if(newTime[0] === time[0] && newTime[1] === time[1])
                   p= `Today | Just now`
-                else if(newTime[1] === time[1])
+                else if(newTime[0] === time[0])
                   p= `Today | ${newTime[1] - time[1]} Minutes`
                 else
                   p= `Today | ${newTime[0] - time[0]} Hours`

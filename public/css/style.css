@@ -1565,7 +1565,7 @@ input {
   color: white;
   font-family: Monospace;
   position: relative;
-  bottom: 100%;
+  top: 100%;
   margin: 4rem 0 0 0;
   box-shadow: 0 -1rem 1rem #fafafa;
 }
@@ -1634,7 +1634,7 @@ input {
     color: white;
     font-family: Monospace;
     position: relative;
-    bottom: 100%;
+    top: 100%;
     margin: 2rem 0 0 0;
     box-shadow: 0 -1rem 1rem #fafafa;
   }
