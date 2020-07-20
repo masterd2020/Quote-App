@@ -538,9 +538,20 @@ button {
 
 .create__quote--content {
   width: 100%;
-  height: 70%;
+  height: 55%;
   position: relative;
   padding: 1rem;
+  outline: #88d0e9;
+}
+
+.author__input {
+  width: 100%;
+  height: 15%;
+  position: relative;
+  padding: .5rem 1rem .5rem;
+  outline: #88d0e9;
+  border: none;
+  text-align: right;
 }
 
 .create__quote--footer {
@@ -566,6 +577,7 @@ button {
   color: #88d0e9;
   -webkit-box-shadow: 0 0 1.5rem #dedede;
   box-shadow: 0 0 1.5rem #dedede;
+  outline: #88d0e9;
 }
 
 .save {
@@ -581,6 +593,7 @@ button {
   color: #88d0e9;
   -webkit-box-shadow: 0 0 1.5rem #dedede;
   box-shadow: 0 0 1.5rem #dedede;
+  outline: #88d0e9;
 }
 
 .submit:active {
@@ -1361,13 +1374,28 @@ input {
 .quotes__content--details {
   position: relative;
   width: 100%;
-  height: 65%;
+  height: 50%;
   display: grid;
   justify-content: center;
   align-content: center;
   font-style: italic;
   font-size: 1.7rem;
   /*border: 1px solid black;*/
+}
+
+.quote__author {
+  position: relative;
+  width: 100%;
+  height: 15%;
+  font-weight: 700;
+  color: #88d0e9;
+  font-family: Courier;
+  display: grid;
+  justify-content: end;
+  align-content: center;
+  font-style: italic;
+  font-size: 1.7rem;
+  padding: 0 2rem 0 0;
 }
 
 .quotes__footer--details {

@@ -35,6 +35,7 @@ block content
               else
                 p= `${newDate[2] - date[2]} days ago | ${date[4]}`
           .quotes__content--details= quote.quote
+          .quote__author= `--${quote.author}`
           .quotes__footer--details
             .quotes__footer--love
               svg.heart#lv__heart(data-id=`${quote.id}`)

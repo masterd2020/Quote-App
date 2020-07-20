@@ -10,6 +10,9 @@ const quoteSchema = mongoose.Schema({
     required: [true, 'Please provide your quote'],
     unique: true
   },
+  author: {
+    type: String
+  },
   love: {
     type: Number,
     default: 0
@@ -19,6 +22,15 @@ const quoteSchema = mongoose.Schema({
     default: new Date(Date.now())
   }
 });
+/*
+quoteSchema.pre('save', function (next) {
+  if(this.author) {
+    return next();
+  }
+  
+  this.author = this.user
+  next()
+})*/
 
 // Query Middleware
 quoteSchema.pre(/^find/, function (next) {
