@@ -2,7 +2,7 @@ const createQuote = async (text, author) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: 'http://localhost:3000/api/v1/quotes',
+      url: '/api/v1/quotes',
       data: {
         quote: text,
         author

@@ -13,7 +13,7 @@ const updateQuote = async (id, currentUpdateBtn, data) => {
     currentUpdateBtn.textContent = 'updating...';
     const res = await axios({
       method: 'PATCH',
-      url: `http://localhost:3000/api/v1/quotes/${id}`,
+      url: `/api/v1/quotes/${id}`,
       data: {
         quote: data
       }
@@ -35,7 +35,7 @@ const deleteQuote = async (id, currentDeleteBtn) => {
     currentDeleteBtn.textContent = 'deleting...';
     const res = await axios({
       method: 'DELETE',
-      url: `http://localhost:3000/api/v1/quotes/${id}`
+      url: `/api/v1/quotes/${id}`
     });
     
     if(res.data.status === 'success') {

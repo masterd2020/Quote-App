@@ -2,7 +2,7 @@ const updateLove = async (id, num, doc) => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: `http://localhost:3000/api/v1/quotes/updateLove/${id}`,
+      url: `/api/v1/quotes/updateLove/${id}`,
       data: {
         love: num
       }

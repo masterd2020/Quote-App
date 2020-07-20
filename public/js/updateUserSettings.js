@@ -3,7 +3,7 @@ const updateProfile = async formData => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: 'http://localhost:3000/api/v1/users/updateProfile',
+      url: '/api/v1/users/updateProfile',
       data: formData
     });
     
@@ -35,7 +35,7 @@ const updatePassword = async (curPassword, password, passwordConfirm) => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: 'http://localhost:3000/api/v1/users/updateMyPassword',
+      url: '/api/v1/users/updateMyPassword',
       data: {
         passwordCurrent: curPassword,
         password,

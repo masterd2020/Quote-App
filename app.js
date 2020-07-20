@@ -6,6 +6,7 @@ const helmet = require ("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 //const hpp = require ("hpp");
 
 
@@ -48,6 +49,7 @@ app.use(mongoSanitize());
 // xss 
 app.use(xss());
 
+app.use(compression());
 
 // Mounting Routes
 app.use('/', viewRoute);
