@@ -1,0 +1,12 @@
+.landing__page--header.inject
+  .header__nav--image
+    a(href='/')
+      img.masterd__logo(src='/img/masterd.jpg')
+  if user
+    button.nav__logout.act Logout
+    a.nav__user--image(href='/dashboard')
+      img.nav__image(src=`/img/users/${user.photo}`)
+      p.span__fix= user.name.split(' ')[0]
+  else  
+    a.nav__login(href='/login') Login
+    a.nav__signup(href='/signup') Signup

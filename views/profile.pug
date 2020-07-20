@@ -1,0 +1,25 @@
+extends dashboardBase
+
+mixin card(text)
+  .profile__card
+    svg.user__icon
+      use(xlink:href='img/icons.svg#icon-user')
+    | 
+    span= text
+
+block content
+  .dashboard__content
+    .dashboard__header--title Profile
+    .profile__section
+      .profile__header
+      img.profile__header--image(src=`/img/users/${user.photo}`)
+      .profile__role
+        .profile__role--quote= `${user.quote.length} quotes`
+        .profile__role--template
+          //- svg
+            use(xlink:href='img/icons.svg#icon-bookmark')
+          //- p.span__user User
+    .profile__section
+      +card(user.name)
+      +card(user.nickname)
+      +card(user.email)

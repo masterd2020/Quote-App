@@ -1,0 +1,17 @@
+extends base
+
+block content
+  .register__section
+    .register__header Create Account
+    form.register__form#form__rg
+      input#fullname__rg.user__fullname.register__validator.reg(type='text' placeholder='Your Fullname please' required)
+      input#nickname__rg.user__nickname.register__validator.reg(type='text' placeholder='Your Nickname please' required)
+      input#email__rg.user__email.register__validator.reg(type='email' placeholder='Your Email please' required)
+      input#password__rg.user__password.register__validator.reg(type='password' placeholder='Your Password please' minlength='8' required)
+      input#passwordConfirm__rg.user__password--confirm.register__validator.reg(type='password' placeholder='Your Password Confirm please' minlength='8' required)
+      input.file__upload(type='file' id='photo'  accept='image/*' name='photo')
+      label(for='photo') Choose a photo
+      input.act.register__user.reg(type='submit' value='Register')
+    .user__others
+      a(href='/login') Already have an account? Login
+      a(href='/forgotPassword') Forgot Password

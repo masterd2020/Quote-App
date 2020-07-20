@@ -1,0 +1,34 @@
+extends base
+
+mixin profileCard(data)
+  .profile__card
+    svg.user__icon
+      use(xlink:href='/img/icons.svg#icon-user')
+    | 
+    span= data
+
+block content
+  .user__profile--page
+    .profile__section
+      .profile__header
+      img.profile__header--image(src=`/img/users/${userData.photo}`)
+      .profile__role
+        .profile__role--quote= `${userData.quote.length} Quotes`
+        .profile__role--template
+    .profile__section
+      +profileCard(userData.name)
+      +profileCard(userData.nickname)
+      +profileCard(userData.email)
+    .dashboard__section
+      each quote in userData.quote
+        .box__quote
+          .quote__content= quote.quote
+          .box__quote--footer
+            img.box__quote--image(src=`/img/users/${userData.photo}`)
+            span= userData.nickname
+            svg.user__heart
+              use(xlink:href='/img/icons.svg#icon-heart')
+            
+            span= `: ${quote.love}`
+            
+        

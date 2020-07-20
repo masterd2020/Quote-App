@@ -1,0 +1,18 @@
+extends dashboardBase
+
+block content
+  .dashboard__content
+    .dashboard__header--title My Quotes
+    .dashboard__section
+      each quote in user.quote
+        .box__quote
+          textarea.quote__content= quote.quote
+          .box__quote--footer
+            img.box__quote--image(src=`/img/users/${user.photo}`)
+            span= user.nickname
+            #btn__edit.btn__update(data-id=`${quote.id}`) Update
+            #btn__del.btn__delete(data-id=`${quote.id}`) Delete
+            svg#edt.edit__icon
+              use#edt2(xlink:href='/img/icons.svg#icon-edit')
+            svg#del.delete__icon
+              use#del2(xlink:href='/img/icons.svg#icon-delete')

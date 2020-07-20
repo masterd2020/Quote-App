@@ -1,0 +1,26 @@
+extends dashboardBase
+
+block content
+  .dashboard__content
+    .dashboard__header--title Update Profile
+    .profile__section
+      .profile__header
+      img.profile__header--image(src=`/img/users/${user.photo}`)
+      .profile__role
+        .profile__role--quote= `${user.quote.length} quotes`
+        .profile__role--template
+          //- svg
+            use(xlink:href='img/icons.svg#icon-bookmark')
+          //- p.span__user User
+    .profile__section
+      form#update__profile.password__update
+        label(for='Name') Name
+        input#update__name.name.profile__validator.generic(type='text' value=`${user.name}` required)
+        br
+        label(for='Email') Email
+        input#update__email.email.profile__validator.generic(value=`${user.email}` type='email' required)
+        br
+        label(for='update__photo') Choose a photo
+        input#update__photo.profile__validator.generic(type='file' value=`${user.photo}` accept='image/*')
+        br
+        input.save(type='submit' value='save')

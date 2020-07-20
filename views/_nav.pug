@@ -1,0 +1,32 @@
+mixin nav(link, text) 
+  .dashboard__nav--1
+    svg.quote__icon
+      use(xlink:href=`/img/icons.svg#icon-arrow-right-circle`)
+    a(href=`${link}`)= text
+    
+mixin navBtn(text) 
+  .dashboard__nav--1
+    svg.quote__icon
+      use(xlink:href=`/img/icons.svg#icon-arrow-right-circle`)
+    div#create__quote--btn= text
+    
+
+.dashboard__tab
+  .user__picture
+    img.user__image(src=`/img/users/${user.photo}`)
+    p.user__name= user.nickname
+  .dashboard__nav
+    h5.dashboard__nav--link Link
+    //- .dashboard__nav--1
+      svg.quote__icon
+        use(xlink:href='/img/icons.svg#icon-arrow-right-circle')
+      a(href='#') Get All Quote
+  
+    +nav('/dashboard', 'Get All Quote')
+    +nav('/create-quote', 'Create Quote')
+  .dashboard__nav
+    h5.dashboard__nav--link Settings
+    +nav('/profile', 'Profile')
+    +nav('/update-profile', 'Update Profile')
+    +nav('/update-password', 'Update My Password')
+  .close__nav x

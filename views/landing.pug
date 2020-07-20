@@ -1,0 +1,44 @@
+extends base
+
+block content
+  .landing__wrapper
+    .user__sidebar
+      .landing__header User
+      .user__sidebar--content
+        each user in users
+          .user__nav
+            .user__nav--image-container
+              img.user__nav--image(src=`/img/users/${user.photo}`)
+            a.user__nav--profile(href=`/user/${user.nickname}`)= user.name
+    
+    .quotes__template
+      .quotes__template--header Recent Quotes
+      each quote in quotes
+        .quotes__template--content
+          .quotes__header--details
+            .quotes__header--image.gca
+              img.image__rounded--medium(src=`/img/users/${quote.user.photo}` alt=`${quote.user.name}`)
+            .quotes__header--text
+              p= quote.user.name
+              - const newDate = new Date().toString().split(' ')
+              - const date = quote.createdAt.toString().split(' ')
+              - const newTime = newDate[4].split(':')
+              - const time = date[4].split(':')
+              
+              if(newDate[2] === date[2])
+                if(newTime[0] === time[0] && newTime[1] === time[1])
+                  p= `Today | Just now`
+                else if(newTime[1] === time[1])
+                  p= `Today | ${newTime[1] - time[1]} Minutes`
+                else
+                  p= `Today | ${newTime[0] - time[0]} Hours`
+              else
+                p= `${newDate[2] - date[2]} days ago | ${date[4]}`
+          .quotes__content--details= quote.quote
+          .quotes__footer--details
+            .quotes__footer--love
+              svg.heart#lv__heart(data-id=`${quote.id}`)
+                use#lv__hearted(xlink:href='/img/icons.svg#icon-heart' data-id=`${quote.id}`)
+              p#num.love= quote.love
+              
+  include _footer

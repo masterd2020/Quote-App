@@ -1,0 +1,12 @@
+extends base
+
+block content
+  .register__section.alert__lg
+    .register__header Welcome Back !!!
+    form.register__form#form__lg
+      input#email__lg.login__email.login__validator.reg(type='email' placeholder='Your Email please' required)
+      input#password__lg.login__password.login__validator.reg(type='password' placeholder='Your Password please' minlength='8' required)
+      input.act.register__user.reg(type='submit' value='Login')
+    .user__others
+      a(href='/signup') Create Account
+      a(href='/forgotPassword') Forgot Password
