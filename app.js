@@ -15,7 +15,7 @@ const viewRoute = require('./routes/viewRoute');
 const QuoteError = require('./utils/quoteError');
 const globalErrorHandling = require('./controllers/globalErrorHandling');
 
-// Start express app
+// Start express application
 const app = express();
 
 // Global Middleware
