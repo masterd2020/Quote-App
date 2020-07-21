@@ -30,4 +30,11 @@ Create, Edit, Delete and Get all Quote
 
 # Acknowledgement
 
-Jonas Schmedtmann Nodejs, Express and Mongodb Bootcamp help me alot in completing this application and also some medium articles
+Jonas Schmedtmann Nodejs, Express and Mongodb Bootcamp help me alot in completing this application and also some medium articles.
+
+# Contributing
+
+please feel free to fork, comment or submit a pull request.
+
+# Author
+Fasasi Toheeb
