@@ -12,9 +12,9 @@ Create, Edit, Delete and Get all Quote
 
 `\logout` Log user out of the application
 
-`\user\:username` Get all the user data
+`\user\:username` Get the public user data together with all the quotes
 
-`\forgot-password`
+`\forgot-password` Get a link to reset your password
 
 `\reset-password` Reset the user password
 
@@ -27,3 +27,7 @@ Create, Edit, Delete and Get all Quote
 `\update-profile` Update logged in user data
 
 `\update-password` Update logged in user password
+
+# Acknowledgement
+
+Jonas Schmedtmann Nodejs, Express and Mongodb Bootcamp help me alot in completing this application and also some medium articles
