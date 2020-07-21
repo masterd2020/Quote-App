@@ -2,11 +2,12 @@ extends dashboardBase
 
 block content
   .dashboard__content
-    .dashboard__header--title Create Quote
+    .dashboard__header--title Quote
     .create__quote--section
       form.quote__form#create__quote--form
         .create__quote--header Create Quote
         textarea.create__quote--content(required)
         input.author__input(type='text' placeholder='Author' required)
+        input.tag__input(type='text' placeholder='TAG => work, success, motivational' required)
         .create__quote--footer
           input.submit.act(type='submit' value='Create')

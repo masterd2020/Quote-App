@@ -21,6 +21,6 @@ block content
         input#update__email.email.profile__validator.generic(value=`${user.email}` type='email' required)
         br
         label(for='update__photo') Choose a photo
-        input#update__photo.profile__validator.generic(type='file' value=`${user.photo}` accept='image/*')
+        input#update__photo.profile__validator.generic__photo(type='file' value=`${user.photo}` accept='image/*')
         br
         input.save(type='submit' value='save')

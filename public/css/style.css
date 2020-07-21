@@ -517,7 +517,7 @@ button {
 
 .quote__form {
   width: 35rem;
-  height: 20rem;
+  height: 25rem;
   border-radius: 1rem;
   border: 2px solid #88d0e9;
   margin: 4rem auto;
@@ -526,7 +526,7 @@ button {
 
 .create__quote--header {
   width: 100%;
-  height: 15%;
+  height: 10%;
   position: relative;
   padding: .5rem;
   top: 0;
@@ -538,15 +538,28 @@ button {
 
 .create__quote--content {
   width: 100%;
-  height: 55%;
+  height: 50%;
   position: relative;
   padding: 1rem;
   outline: #88d0e9;
+  border: none;
+  border-bottom: 2px solid #88d0e9;
 }
 
 .author__input {
   width: 100%;
   height: 15%;
+  position: relative;
+  padding: .5rem 1rem .5rem;
+  outline: #88d0e9;
+  border: none;
+  border-bottom: 2px solid #88d0e9;
+  text-align: right;
+}
+
+.tag__input {
+  width: 100%;
+  height: 10%;
   position: relative;
   padding: .5rem 1rem .5rem;
   outline: #88d0e9;
@@ -642,7 +655,7 @@ button {
   
   .create__quote--header {
     width: 100%;
-    height: 15%;
+    height: 10%;
     position: relative;
     padding: .5rem;
     top: 0;
@@ -654,9 +667,32 @@ button {
 
   .create__quote--content {
     width: 100%;
-    height: 70%;
+    height: 50%;
     position: relative;
     padding: 1rem;
+    border: none;
+    border-bottom: 1px solid #88d0e9;
+  }
+  
+  .author__input {
+    width: 100%;
+    height: 15%;
+    position: relative;
+    padding: .2rem 1rem .2rem;
+    outline: #88d0e9;
+    border: none;
+    border-bottom: 1px solid #88d0e9;
+    text-align: right;
+  }
+  
+  .tag__input {
+    width: 100%;
+    height: 10%;
+    position: relative;
+    padding: .2rem 1rem .2rem;
+    outline: #88d0e9;
+    border: none;
+    text-align: right;
   }
   
   .create__quote--footer {
@@ -857,6 +893,16 @@ input {
   font-family: times;
 }
 
+.generic__photo {
+  width: 19rem;
+  height: 2rem;
+  margin: .5rem;
+  outline: blue;
+  font-size: 1rem;
+  font-family: times;
+  opacity: 0;
+}
+
 .new__password {
   margin: 1rem 0 1rem 2rem;
 }
@@ -893,6 +939,17 @@ input {
     padding: 1.3rem .5rem;
     font-size: .8rem;
     font-family: times;
+  }
+  
+  .generic__photo {
+    width: 10rem;
+    height: 2rem;
+    margin: .5rem;
+    outline: blue;
+    font-size: 1rem;
+    font-family: times;
+    font-size: .8rem;
+    opacity: 0;
   }
   
   .new__password {
@@ -992,6 +1049,7 @@ input {
   grid-row: 5/6;
   width: 100%;
   opacity: 0;
+  color: white;
   border-bottom: 1px solid #88d0e9;
   padding: .7rem;
   border: 2px solid #88d0e9;
@@ -1369,6 +1427,19 @@ input {
   align-content: center;
   color: black;
   font-weight: 700;
+  position: relative;
+}
+
+.tag__template {
+  position: absolute;
+  right: .3rem;
+  top: .3rem;
+  background: #88d0e9;
+  border-radius: .5rem;
+  color: white;
+  padding: .5rem;
+  font-family: times;
+  font-size: 1.3rem;
 }
 
 .quotes__content--details {
@@ -1380,6 +1451,8 @@ input {
   align-content: center;
   font-style: italic;
   font-size: 1.7rem;
+  padding: 1.5rem;
+  text-align: center;
   /*border: 1px solid black;*/
 }
 
@@ -1534,12 +1607,40 @@ input {
   .quotes__content--details {
     position: relative;
     width: 100%;
-    height: 65%;
+    height: 50%;
     display: grid;
     justify-content: center;
     align-content: center;
     font-style: italic;
     font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .tag__template {
+    position: absolute;
+    right: .3rem;
+    top: .3rem;
+    background: #88d0e9;
+    border-radius: .5rem;
+    color: white;
+    padding: .3rem;
+    font-family: times;
+    font-size: .8rem;
+  }
+  
+  .quote__author {
+    position: relative;
+    width: 100%;
+    height: 15%;
+    color: #88d0e9;
+    font-family: Courier;
+    display: grid;
+    justify-content: end;
+    align-content: center;
+    font-style: italic;
+    font-size: .8rem;
+    padding: 0 1rem 0 0;
   }
   
   .quotes__footer--details {
@@ -1594,8 +1695,10 @@ input {
   font-family: Monospace;
   position: relative;
   top: 100%;
-  margin: 4rem 0 0 0;
-  box-shadow: 0 -1rem 1rem #fafafa;
+  margin: 0;
+  border-top: 2px solid #88d0e9;
+  border-bottom: 2px solid #88d0e9;
+  /*box-shadow: 0 -1rem 1rem #fafafa;*/
 }
 
 .footer__content {
@@ -1610,7 +1713,11 @@ input {
   color: black;
   font-family: Sans-Serif;
   margin: 1rem 0;
-  font-weight: 600;
+  background: #88d0e9;
+  border: 1px solid #88d0e9;
+  border-radius: .5rem;
+  color: white;
+  text-align: center;
 }
 
 .aims {
@@ -1636,6 +1743,11 @@ input {
 .contact__us {
   font-family: Sans-Serif;
   margin: 0 0 1rem;
+  background: #88d0e9;
+  border: 1px solid #88d0e9;
+  border-radius: .5rem;
+  color: white;
+  text-align: center;
 }
 
 .whatsapp__icon {
@@ -1662,9 +1774,10 @@ input {
     color: white;
     font-family: Monospace;
     position: relative;
-    top: 100%;
     margin: 2rem 0 0 0;
-    box-shadow: 0 -1rem 1rem #fafafa;
+    border-top: 2px solid #88d0e9;
+    border-bottom: 2px solid #88d0e9;
+    /*box-shadow: 0 -1rem 1rem #fafafa;*/
   }
   
   .footer__content {
@@ -1679,7 +1792,11 @@ input {
     color: black;
     font-family: Sans-Serif;
     margin: .5rem 0;
-    font-size: 1.5rem;
+    background: #88d0e9;
+    border: 1px solid #88d0e9;
+    border-radius: .5rem;
+    color: white;
+    text-align: center;
   }
   
   .aims {
@@ -1705,6 +1822,11 @@ input {
   .contact__us {
     font-family: Sans-Serif;
     margin: 0 0 .5rem;
+    background: #88d0e9;
+    border: 1px solid #88d0e9;
+    border-radius: .5rem;
+    color: white;
+    text-align: center;
   }
   
   .whatsapp__icon {

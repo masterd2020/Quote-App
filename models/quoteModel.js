@@ -13,6 +13,13 @@ const quoteSchema = mongoose.Schema({
   author: {
     type: String
   },
+  tag: {
+    type: String,
+    enum: {
+      values: ["work", "success", "motivational"],
+      message: "please specify only: work. success, motivational"
+    }
+  },
   love: {
     type: Number,
     default: 0

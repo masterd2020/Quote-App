@@ -13,7 +13,7 @@ exports.getLandingPage = asyncError( async (req, res) => {
   res.status(200).render('landing', {
     users,
     quotes,
-    title: 'Welcome to this wonderful project'
+    title: 'Quote | Welcome!!!'
   });
 });
 

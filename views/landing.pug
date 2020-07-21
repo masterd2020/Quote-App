@@ -34,6 +34,7 @@ block content
                   p= `Today | ${newTime[0] - time[0]} Hours`
               else
                 p= `${newDate[2] - date[2]} days ago | ${date[4]}`
+              .tag__template= quote.tag
           .quotes__content--details= quote.quote
           .quote__author= `--${quote.author}`
           .quotes__footer--details

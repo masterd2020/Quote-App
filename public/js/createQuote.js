@@ -1,11 +1,12 @@
-const createQuote = async (text, author) => {
+const createQuote = async (text, author, tag) => {
   try {
     const res = await axios({
       method: 'POST',
       url: '/api/v1/quotes',
       data: {
         quote: text,
-        author
+        author,
+        tag
       }
     });
     
@@ -24,6 +25,7 @@ createQuoteForm.addEventListener('submit', e => {
   e.preventDefault();
   const text = document.querySelector('.create__quote--content').value;
   const author = document.querySelector('.author__input').value;
+  const tag = document.querySelector('.tag__input').value;
   
-  createQuote(text, author);
+  createQuote(text, author, tag);
 })
