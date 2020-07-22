@@ -41,6 +41,7 @@ const sendErrorDev = (err, res, req) => {
 
 const sendErrorProd = (err, res, req) => {
   if(req.originalUrl.startsWith('/api')) {
+    console.log(err);
     if(err.isOperational) {
       return res.status(err.statusCode).json({
         status: err.status,
