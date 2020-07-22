@@ -40,8 +40,8 @@ router
 
 // All the route after this Middleware are protected and restrictTo admin
 
-//router.use(authController.protect);
-//router.use(authController.restrictTo('admin'));
+router.use(authController.protect);
+router.use(authController.restrictTo('admin'));
 
 router
   .route('/')
