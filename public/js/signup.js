@@ -2,7 +2,7 @@ const signup = async data => {
   try {
     const res = await axios({
       method: 'POST',
-      url: 'https://quoteapps.herokuapp.com/api/v1/users/signup',
+      url: '/api/v1/users/signup',
       data
     });
     
