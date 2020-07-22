@@ -26,4 +26,11 @@ mongoose.connect(DB, {
 
 // Listening to port
 const port = process.env.PORT || 4000;
-app.listen(port, () => console.log(`Now listening to port ${port}`));
+const server = app.listen(port, () => console.log(`Now listening to port ${port}`));
+
+process.on('SIGTERM', () => {
+  console.log('💥 SIGTERM RECEIVED shutting down');
+  server.close(() => {
+    console.log('Process Terminated');
+  });
+});
