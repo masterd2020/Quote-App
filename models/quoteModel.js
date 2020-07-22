@@ -17,7 +17,7 @@ const quoteSchema = mongoose.Schema({
     type: String,
     enum: {
       values: ["work", "success", "motivational"],
-      message: "please specify only: work. success, motivational"
+      message: "please specify only: work, success, motivational in lower case"
     }
   },
   love: {

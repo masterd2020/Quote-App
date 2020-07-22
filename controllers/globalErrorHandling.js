@@ -18,6 +18,12 @@ const handleValidationError = err => {
   return new QuoteError(message, 400);
 };
 
+const handleValidatorError = err => {
+  const error = Object.values(err.errors).map(el => el.message);
+  
+  return new QuoteError(error, 400);
+};
+
 const handleCastErrorDB = err => {
   const message = `Invalid ${err.path}: ${err.value}`;
   
@@ -74,6 +80,8 @@ module.exports = (err, req, res, next) => {
     error.message = err.message
     
     if(error.name === 'ValidationError') error = handleValidationError(error);
+    
+    if(error.name === 'ValidatorError') error = handleValidatorError(error);
     
     if(error.name === 'CastError') error = handleCastErrorDB(error);
     
