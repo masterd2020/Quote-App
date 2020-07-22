@@ -72,7 +72,8 @@ module.exports = (err, req, res, next) => {
     sendErrorDev(err, res, req);
   } else if (process.env.NODE_ENV === 'production') {
     let error = {...err};
-    error.message = err.message
+    error.message = err.message;
+    error.isOperational = err.isOperational;
     
     if(error.name === 'ValidationError') error = handleValidationError(error);
     
