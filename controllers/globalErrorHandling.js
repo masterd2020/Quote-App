@@ -12,7 +12,6 @@ const handleDuplicateFieldsDB = err => {
 };
 
 const handleValidationError = err => {
-  err.isOperational = true;
   const error = Object.values(err.errors).map(el => el.message);
   const message = `Invalid input data:  ${error.join('. ')}`;
   
@@ -74,7 +73,7 @@ module.exports = (err, req, res, next) => {
   } else if (process.env.NODE_ENV === 'production') {
     let error = {...err};
     error.message = err.message;
-    error.isOperational = err.isOperational;
+    error.isOperational = true;
     
     if(error.name === 'ValidationError') error = handleValidationError(error);
     
