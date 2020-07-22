@@ -73,9 +73,16 @@ exports.signup = asyncError(async (req, res, next) => {
   } else {
     req.body.photo = 'default.jpg'
   }
-    const user = await User.create(req.body);
+  const user = await User.create({
+    name: req.body.name,
+    email: req.body.email,
+    nickname: req.body.nickname,
+    photo: req.body.photo,
+    password: req.body.password,
+    passwordConfirm: req.body.passwordConfirm
+  });
     
-    sendToken(user, 201, res);
+  sendToken(user, 201, res);
 });
 
 exports.logout = (req, res) => {
