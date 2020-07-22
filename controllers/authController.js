@@ -40,7 +40,7 @@ const signToken = id => {
     });
 };
 
-const sendToken = (user, statusCode, res) => {
+const sendToken = (user, statusCode, req, res) => {
   const token = signToken(user._id);
   
   /*const cookieOptions = {
@@ -82,7 +82,7 @@ exports.signup = asyncError(async (req, res, next) => {
     passwordConfirm: req.body.passwordConfirm
   });
     
-  sendToken(user, 201, res);
+  sendToken(user, 201, req, res);
 });
 
 exports.logout = (req, res) => {
@@ -112,7 +112,7 @@ exports.login = asyncError(async (req, res, next) => {
     return next(new QuoteError("Incorrect Password or Email", 401))
   }
   
-  sendToken(user, 200, res);
+  sendToken(user, 200, req, res);
   
   /*const token = signToken(user._id);
   
@@ -256,7 +256,7 @@ exports.resetPassword = asyncError(async(req, res, next) => {
   // 3) changed the passwordChangedAt
   
   // 4) Log the user in
-  sendToken(user, 200, res);
+  sendToken(user, 200, req, res);
 });
 
 exports.updateMyPassword = asyncError(async (req, res, next) => {
@@ -274,5 +274,5 @@ exports.updateMyPassword = asyncError(async (req, res, next) => {
   await user.save();
   
   // 3) Log the user in
-  sendToken(user, 200, res);
+  sendToken(user, 200, req, res);
 });
