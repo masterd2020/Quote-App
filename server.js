@@ -29,7 +29,7 @@ const port = process.env.PORT || 4000;
 const server = app.listen(port, () => console.log(`Now listening to port ${port}`));
 
 process.on('SIGTERM', () => {
-  console.log('💥 SIGTERM RECEIVED shutting down');
+  console.log('🖐️ SIGTERM RECEIVED shutting down');
   server.close(() => {
     console.log('Process Terminated');
   });
