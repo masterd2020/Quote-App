@@ -8,7 +8,7 @@ block content
         each user in users
           .user__nav
             .user__nav--image-container
-              img.user__nav--image(src=`/img/users/${user.photo}`)
+              img.user__nav--image(src=`/img/users/${user.photo}` alt=`${user.name}`)
             a.user__nav--profile(href=`/user/${user.nickname}`)= user.name
     
     .quotes__template
