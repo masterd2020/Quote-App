@@ -1,7 +1,7 @@
 {
-  "name": "home",
+  "name": "quoteapp",
   "version": "1.0.0",
-  "description": "fun",
+  "description": "Quote Application",
   "main": "app.js",
   "scripts": {
     "start": "node server.js",
