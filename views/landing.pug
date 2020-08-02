@@ -32,6 +32,8 @@ block content
                   p= `Today | ${newTime[1] - time[1]} Minutes`
                 else
                   p= `Today | ${newTime[0] - time[0]} Hours`
+              else if (newDate[2] > date[2])
+                p= `${newDate[2] - date[2]} months ago | ${date[4]}`
               else
                 p= `${newDate[2] - date[2]} days ago | ${date[4]}`
               .tag__template= quote.tag
